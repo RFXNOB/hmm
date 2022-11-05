@@ -1,0 +1,185 @@
+if game.PlaceId == 4042427666 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Anime Fighting Simulator", "BloodTheme")
+ 
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+    MainSection:NewToggle("Auto Strength", "Automatically Gets Strength", function(v)
+        getgenv().autoswing = v
+        while true do
+            if not getgenv().autoswing then return end
+            wait(1.2)
+
+local args = {
+    [1] = "Stat",
+    [2] = "Strength"
+}
+
+game:GetService("ReplicatedStorage").RSPackage.Events.StatFunction:InvokeServer(unpack(args))
+
+        end
+    end)
+
+    MainSection:NewToggle("Auto Endurance", "Automatically Gets Endurance", function(v)
+        getgenv().autoclick = v
+        while true do
+            if not getgenv().autoclick then return end
+            wait(1.2)
+
+local args = {
+    [1] = "Stat",
+    [2] = "Durability"
+}
+
+game:GetService("ReplicatedStorage").RSPackage.Events.StatFunction:InvokeServer(unpack(args))
+
+        end
+    end)
+
+    MainSection:NewToggle("Auto Speed", "Automatically Gets Speed", function(v)
+        getgenv().autotap = v
+        while true do
+            if not getgenv().autotap then return end
+            wait(1.2)
+
+local args = {
+    [1] = "Stat",
+    [2] = "Speed"
+}
+
+game:GetService("ReplicatedStorage").RSPackage.Events.StatFunction:InvokeServer(unpack(args))
+
+        end
+    end)
+
+    MainSection:NewToggle("Auto Sword", "Automatically Swings Sword", function(v)
+        getgenv().autohit = v
+        while true do
+            if not getgenv().autohit then return end
+            wait(1.2)
+
+local args = {
+    [1] = "Stat",
+    [2] = "Sword"
+}
+
+game:GetService("ReplicatedStorage").RSPackage.Events.StatFunction:InvokeServer(unpack(args))
+
+        end
+    end)
+
+    local Teleport = Window:NewTab("Teleport")
+    local TeleportSection = Teleport:NewSection("Teleport")
+
+    TeleportSection:NewButton("100 Strength", "Teleports to 100 Strengh Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(24.4479179, 64.9739456, 142.510162, -0.999840319, 6.6489747e-09, 0.0178703107, 8.40372305e-09, 1, 9.81184201e-08, -0.0178703107, 9.82529258e-08, -0.999840319) 
+    end)
+
+    TeleportSection:NewButton("100 Durability", "Teleports to 100 Dura Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(111.447166, 72.0932007, 890.294983, -0.992771924, 2.18109033e-08, 0.120016463, 1.33647573e-08, 1, -7.11797981e-08, -0.120016463, -6.90613149e-08, -0.992771924) 
+    end)
+
+    TeleportSection:NewButton("100 Speed", "Teleports to 100 Speed Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.051384, 61.1739616, -486.122589, 0.998663843, -3.14904476e-08, 0.0516776033, 3.07136823e-08, 1, 1.58251066e-08, -0.0516776033, -1.42167513e-08, 0.998663843) 
+    end)
+
+    TeleportSection:NewButton("500 CHRK", "Teleports to 500 CHRK Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.2053318, 64.9739456, -98.0689468, 0.999664545, -5.21221066e-09, -0.0259006694, 3.32329742e-09, 1, -7.29721776e-08, 0.0259006694, 7.28616172e-08, 0.999664545) 
+    end)
+
+    TeleportSection:NewLabel("10K")
+
+    TeleportSection:NewButton("10k Strength", "Teleports to 10k Strengh Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1394.35193, 141.973923, -118.454903, 0.016176654, -9.18821996e-09, 0.999869168, 3.24646692e-08, 1, 8.66418404e-09, -0.999869168, 3.23202656e-08, 0.016176654) 
+    end)
+
+    TeleportSection:NewButton("10k Durability", "Teleports to 10k Durability Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1570.92871, 61.3577919, -522.624023, -0.0115663987, 3.68250597e-10, 0.999933124, -2.5701774e-10, 1, -3.71248199e-10, -0.999933124, -2.61294569e-10, -0.0115663987) 
+    end)
+
+    TeleportSection:NewButton("10k S&A", "Teleports to 10k S&A Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-412.070526, 122.391731, -73.5244904, -0.994982123, -1.53747752e-08, -0.100052916, -1.72136758e-08, 1, 1.75159709e-08, 0.100052916, 1.91503577e-08, -0.994982123) 
+    end)
+
+    TeleportSection:NewButton("15k CHRK", "Teleports to 15k CHRK Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1456.4469, 146.973923, -557.172363, 0.999819696, 5.24577395e-08, 0.0189888664, -5.46961196e-08, 1, 1.17359235e-07, -0.0189888664, -1.18376697e-07, 0.999819696) 
+    end)
+
+    TeleportSection:NewLabel("100K")
+
+    TeleportSection:NewButton("100k Strength", "Teleports to 100k Strengh Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1221.9458, 58.9739609, 502.282227, -0.455793023, 1.35474023e-08, 0.890085816, -2.09483519e-09, 1, -1.62930505e-08, -0.890085816, -9.29084187e-09, -0.455793023) 
+    end)
+
+    TeleportSection:NewButton("100k Durability", "Teleports to 100k Dura Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-33.2592583, 83.9818802, 2046.01489, -0.98124671, 5.66138212e-08, 0.192756101, 7.47475113e-08, 1, 8.68036238e-08, -0.192756101, 9.95838079e-08, -0.98124671) 
+    end)
+
+    TeleportSection:NewButton("100k S&A", "Teleports to 100K S&A Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3507.6853, 59.9739609, 163.896729, 0.207359284, -2.68332889e-09, -0.978264868, -1.26758604e-09, 1, -3.01163294e-09, 0.978264868, 1.86452498e-09, 0.207359284) 
+    end)
+
+    TeleportSection:NewButton("150k CHRK", "Teleports to 150K CHRK Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.870361, 140.973923, 804.082031, 0.933837116, -1.15394156e-08, 0.35769853, -9.3492778e-09, 1, 5.66681599e-08, -0.35769853, -5.62630547e-08, 0.933837116)        
+    end)
+
+    TeleportSection:NewLabel("1M")
+
+    TeleportSection:NewButton("1m Strength", "Teleports to 1m Strength Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-849.651917, 71.3769684, 196.9841, 0.664319456, -5.96732264e-08, 0.747448742, 1.07085718e-07, 1, -1.53400421e-08, -0.747448742, 9.02317723e-08, 0.664319456)        
+    end)
+
+    TeleportSection:NewButton("1m Durability", "Teleports to 1m Durability Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-589.514587, 178.973923, 754.608704, -0.552685142, -2.76397163e-08, -0.833390176, 1.73658012e-08, 1, -4.46819968e-08, 0.833390176, -3.91675634e-08, -0.552685142)        
+    end)
+
+    TeleportSection:NewButton("1.5m CHRK", "Teleports to 1.5m CHRK Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1579.2616, 388.173859, 689.018982, -0.296712071, 9.98618717e-08, -0.954966962, 3.07385939e-08, 1, 9.50204182e-08, 0.954966962, -1.16063736e-09, -0.296712071)       
+    end)
+
+    TeleportSection:NewLabel("10M")
+
+    TeleportSection:NewButton("10m Strength", "Teleports to 10m Strength Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2225.9585, 617.663513, 556.621399, -0.045069661, 1.3011767e-07, 0.99898386, 3.16881987e-09, 1, -1.30107068e-07, -0.99898386, -2.6982816e-09, -0.045069661)        
+    end)
+
+    TeleportSection:NewButton("10m Durability", "Teleports to 10m Durability Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-977.262329, 131.462921, -911.693176, 0.997603178, 5.59766775e-08, -0.0691949353, -6.23599234e-08, 1, -9.00900901e-08, 0.0691949353, 9.41891471e-08, 0.997603178)        
+    end)
+
+    TeleportSection:NewButton("250m CHRK", "Teleports to 250m CHRK Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1049.69543, 250.973923, -605.881409, 0.902106762, 4.01671123e-08, -0.431512892, -1.13202301e-08, 1, 6.94186753e-08, 0.431512892, -5.77382337e-08, 0.902106762)        
+    end)
+
+    TeleportSection:NewLabel("1B")
+
+    TeleportSection:NewButton("1b Strength", "Teleports to 1b Strength Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(754.340698, 150.100739, 951.602783, 0.2107943, 2.65091433e-08, 0.97753042, 1.04108997e-08, 1, -2.93634876e-08, -0.97753042, 1.63666272e-08, 0.2107943)        
+    end)
+
+    TeleportSection:NewButton("1b Durability", "Teleports to 1b Durability Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2499.24268, 1539.17773, -359.07605, -0.872413397, 4.79841873e-08, 0.488768697, -2.07803441e-10, 1, -9.85445254e-08, -0.488768697, -8.60731291e-08, -0.872413397)        
+    end)
+
+    TeleportSection:NewButton("1b CHRK", "Teleports to 1b CHRK Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3086.37061, 111.054512, 1123.32898, 0.0172673296, -5.62890463e-08, 0.999850929, -3.00432283e-08, 1, 5.68162832e-08, -0.999850929, -3.1019816e-08, 0.0172673296) 
+    end)
+
+    TeleportSection:NewLabel("100B")
+
+    TeleportSection:NewButton("100b Strength", "Teleports to 100b Strength Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1857.49377, 141.17392, 80.672821, -0.217786402, -8.22986035e-09, -0.975996435, 4.84032547e-09, 1, -9.51234824e-09, 0.975996435, -6.79580037e-09, -0.217786402)        
+    end)
+
+    TeleportSection:NewButton("100b Durability", "Teleports to 100b Durability Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2687.73657, -228.429184, 371.470764, -0.0113690337, -8.89717597e-08, 0.999935389, -1.23085236e-10, 1, 8.89761083e-08, -0.999935389, 8.88495111e-10, -0.0113690337)        
+    end)
+
+    TeleportSection:NewButton("100b CHRK", "Teleports to 100b CHRK Area", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1520.80383, 91.8883972, 1797.34485, 0.999621511, 2.30433828e-09, -0.0275115967, -2.88431301e-09, 1, -2.10414139e-08, 0.0275115967, 2.11128004e-08, 0.999621511)        
+    end)
+
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Eller#6940")
+    end
